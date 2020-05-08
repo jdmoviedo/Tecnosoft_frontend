@@ -1,0 +1,30 @@
+.divborde1{ border-color:#772953 !important;; border-style:solid; border-width:1px; width:100%; margin-top:20px; display:block; border-bottom: none;padding: 0.75rem 1.25rem;}
+.txtgp1{ text-align:left; color:#546980;  font-size:20px; padding-top:8px;}
+.divborde2{
+	border-color: #772953 !important;
+	border-style:solid;
+	border-width: 1px;
+	border-top: none;
+	width: 100%;
+	display: block;
+}
+.txtgp2{ text-align:right; color:#546980;  font-size:16px; padding-top:8px; padding-right:10px;margin-bottom: 0px;}
+.divnombre{ padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0.03);
+    font-size: 18px;
+    border-top: 1px solid #772953 !important;;
+    border-top-style:solid; border-top-width:1px; padding-top:10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.divtitulo{ margin-bottom: 0.75rem;}
+.divdesc{ color:#000; font-size:14px; text-align:justify; padding-right:17px;}
+.divfecha{ font-size:10px; color:#546980; border-bottom-style:solid; border-bottom-width:1px; padding-bottom:20px; margin-right:17px; margin-bottom:0px;}
+.txtgp{
+	text-align: center;
+	color:#546980;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

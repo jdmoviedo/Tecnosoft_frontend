@@ -1,0 +1,112 @@
+svg {
+  fill: #b2b2b2;
+}
+
+svg:hover,
+svg:focus {
+  fill: #4d4d4d;
+}
+.btn-busc {
+  background-color: #b2b2b2;
+  border-color: #b2b2b2;
+  color: #fff;
+}
+.btn-busc:hover,
+.btn-busc:focus {
+  color: #fff;
+  background-color: #4d4d4d;
+  border-color: #4d4d4d;
+}
+
+@media (min-width: 100px) {
+  .animate {
+    animation-duration: 0.6s;
+    -webkit-animation-duration: 0.6s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.notificacion{
+  max-width: 370px;
+  width: 370px;
+  max-height:487px;
+min-height:100px;
+}
+
+
+.notificaciones{
+padding: 0px;
+height: 47px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgb(178, 178, 178);
+  font-weight: 500;
+padding: .5rem .75rem;
+  border-bottom: 1px solid #ebebeb;
+padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.txtnotifi{
+padding:10px;
+border-bottom:1px solid #ebebeb;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: .75rem;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: padding-box;
+}
+
+.drop{
+  font-size: 16px;
+  color: rgb(178, 178, 178);
+}
+

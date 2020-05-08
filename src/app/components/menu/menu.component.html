@@ -1,0 +1,134 @@
+<div class="container" style="padding-top: 100px; margin-bottom: 20px;">
+  <div class="row">
+    <div class="col-md-8" style="border-radius: 1rem; background-color: white;">
+      <div class="divborde1">
+       <div class="row">
+            <div style="font-size: 20px;" class="card-body col-6">
+              <h4>Ultimos Anuncios</h4>
+            </div>
+            <div class="col-6 d-flex flex-row-reverse align-items-center">
+                <button
+                  type="button"
+                  class="btn text-white bg-dark"
+                  data-toggle="modal"
+                  data-target="#ventana_crear_anuncio"
+                >
+                  Crear Anuncio
+                </button>
+              </div>
+       </div>
+      </div>
+      <div class="divborde2">
+
+
+        <div class="divnombre">Sistemas</div>
+        <div class="card-body">
+          <h5>Agenda de Mañana</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+            expedita provident reiciendis aspernatur consequatur at inventore,
+            nulla harum? Voluptates sapiente similique iusto exercitationem at
+            in nobis culpa eius aut illum.
+          </p>
+          <p style="font-size: 10px; color: gray;" class="card-text">
+            12-12-2109
+          </p>
+        </div>
+        <div class="divnombre">Nombre</div>
+        <div class="card-body">
+          <h5>Titulo</h5>
+          <p class="card-text">Descripcion</p>
+          <p style="font-size: 10px; color: gray;" class="card-text">Fecha</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; margin-bottom: 30px; text-align: center;">
+        <span>Todas los anuncios cargados</span>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+    <div class="col-md-3" style="border-radius: 1rem; background-color: white;">
+      cosas
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="ventana_crear_anuncio"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-white bg-dark">
+        <h5 class="modal-title">Crear Anuncio</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          style="color: white;"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label"
+              >Nombre del Grupo</label
+            >
+            <select
+              name="nombre_cmb"
+              class="selectpicker show-menu-arrow form-control"
+              data-style="btn-primary"
+              data-width="auto"
+              data-live-search="true"
+            >
+              <option value="">Seleccione el Grupo:</option>
+              <option value="grupo">nombre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label"
+              >Titulo del Anuncio:</label
+            >
+            <input
+              class="form-control"
+              name="txttit"
+              type="text"
+              id="txttit"
+              size="30"
+              maxlength="30"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label"
+              >Descripcion del Anuncio:</label
+            >
+            <textarea
+              class="form-control"
+              rows="6"
+              cols="30"
+              name="txtsugerencias"
+              id="txtsugerencias"
+              size="500"
+              maxlength="500"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Cerrar
+        </button>
+        <button type="button" class="btn text-white bg-dark">
+          Crear Anuncio
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
