@@ -1,5 +1,5 @@
 .divborde1{ border-color:#772953 !important;; border-style:solid; border-width:1px; width:100%; margin-top:20px; display:block; border-bottom: none;padding: 0.75rem 1.25rem;}
-.txtgp1{ text-align:left; color:#546980;  font-size:20px; padding-top:8px;}
+.txtgp1{ text-align:center; color:#546980;  font-size:20px; padding-top:8px;}
 .divborde2{
 	border-color: #772953 !important;
 	border-style:solid;
@@ -13,7 +13,7 @@
     margin-bottom: 0;
     background-color: rgba(0,0,0,0.03);
     font-size: 18px;
-    border-top: 1px solid #772953 !important;;
+    border-top: 1px solid #772953 !important;
     border-top-style:solid; border-top-width:1px; padding-top:10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -22,9 +22,19 @@
 .divdesc{ color:#000; font-size:14px; text-align:justify; padding-right:17px;}
 .divfecha{ font-size:10px; color:#546980; border-bottom-style:solid; border-bottom-width:1px; padding-bottom:20px; margin-right:17px; margin-bottom:0px;}
 .txtgp{
-	text-align: center;
 	color:#546980;
 	font-size: 18px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	text-align: center;
 }
+.divborde{ border-color:#772953 !important; border-style:solid; border-width:1px;  width:100%; margin-top:20px; display:block;}
+
+.divtexto{padding-top:0px; padding-right:0px; margin-right:0px; width:100%;}
+
+.txtng{ font-weight:bold; font-size: 16px;}
+.txtusu{ font-size: 14px;}
+
+.divgrupo{border-color:#772953 !important; border-style:solid; border-width:1px; padding-top: 10px;	
+	padding-bottom: 10px; border-top: none;}
+
+.divgrupo1{border-color:#772953 !important; border-style:solid; border-width:1px;border-top-style:none;	padding-top: 10px;	
+	padding-bottom: 10px;}

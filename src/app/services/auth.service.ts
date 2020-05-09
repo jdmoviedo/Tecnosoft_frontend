@@ -24,6 +24,10 @@ export class AuthService {
     return this.http.post<any>(this.URL + '/signin', user)
   }
 
+  getMenu(){
+    return this.http.get<any>(this.URL + '/menu')
+  }
+
   loggedIn(){
     return !!localStorage.getItem('token');
   }

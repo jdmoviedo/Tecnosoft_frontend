@@ -1,1 +1,8 @@
-body{font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;background-color:#f4f4f7}
+body{font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";background-color:#f4f4f7}
+svg {
+    fill: #b2b2b2;
+  }
+  svg:hover,
+  svg:focus {
+    fill: #4d4d4d;
+}

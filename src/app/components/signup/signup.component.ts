@@ -9,10 +9,11 @@ import {Router} from '@angular/router'
 })
 export class SignupComponent implements OnInit {
   usuario={
-    name:'',
+    usunom:'',
     email: '',
     password:'',
-    confirm_password:''    
+    confirm_password:'',
+    tipo: ''    
     }
 
   constructor(
