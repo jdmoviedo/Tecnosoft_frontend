@@ -49,7 +49,15 @@
 
     <div class="col-md-1"></div>
 
-    <div class="col-md-3" style="border-radius: 1rem; background-color: white;height: max-content;padding-bottom: 20px;">
+    <div
+      class="col-md-3"
+      style="
+        border-radius: 1rem;
+        background-color: white;
+        height: max-content;
+        padding-bottom: 20px;
+      "
+    >
       <div style="padding-left: 0px;" class="divborde">
         <div style="text-align: center;" class="divtexto">
           <br />
@@ -64,10 +72,13 @@
           class="d-flex justify-content-center"
           style="padding-bottom: 15px;"
         >
-          <select class="form-control custom-select" style="width: 90%;">
-            <option value="">Seleccione el Grupo:</option>
-            <option value="">Ver todos</option>
-          </select>
+        <select ngModel name="agregar" class="form-control selectpicker show-tick" title="Seleccione un Grupo" data-style="bg-light" data-size="6" data-container="body"            data-live-search="true" data-width="90%">
+          <option
+            *ngFor="let obtgrupo of obtgrupos"
+            [ngValue]="obtgrupo.nombre">
+            {{ obtgrupo.nombre }}
+          </option>
+        </select>
         </div>
       </div>
 
@@ -119,7 +130,7 @@
                   />
                 </svg>
               </div>
-  
+
               <div class="col-lg-9">
                 Unirse a un Grupo
               </div>
@@ -244,130 +255,187 @@
   </div>
 </div>
 
-<ng-container *ngIf="menu.tipo === 'Jefe'; else">
-<div
-  class="modal fade"
-  id="ventana_crear_anuncio"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-white bg-dark ">
-        <h5 class="modal-title d-flex ">Crear Anuncio</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          style="color: white;"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label"
-              >Nombre del Grupo</label
-            >
-            <select
-              name="nombre_cmb"
-              class="selectpicker show-menu-arrow form-control"
-              data-style="btn-primary"
-              data-width="auto"
-              data-live-search="true"
-            >
-              <option value="">Seleccione el Grupo:</option>
-              <option value="grupo">nombre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label"
-              >Titulo del Anuncio:</label
-            >
-            <input
-              class="form-control"
-              name="txttit"
-              type="text"
-            />
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label"
-              >Descripcion del Anuncio:</label
-            >
-            <textarea
-              class="form-control"
-              rows="6"
-              cols="30"
-              name="txtsugerencias"
-              id="txtsugerencias"
-              size="500"
-              maxlength="500"
-            ></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Cerrar
-        </button>
-        <button type="button" class="btn text-white bg-dark">
-          Crear Anuncio
-        </button>
+<ng-container *ngIf="menu.tipo === 'Jefe'; else empleado1">
+  <div
+    class="modal fade"
+    id="ventana_crear_anuncio"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-white bg-dark">
+          <h5 class="modal-title d-flex">Crear Anuncio</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            style="color: white;"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label"
+                >Nombre del Grupo</label
+              >
+              <select
+                name="nombre_cmb"
+                class="form-control selectpicker show-tick" title="Seleccione el Grupo" data-style="bg-light" data-size="6" data-container="body"            data-live-search="true"
+              >
+                 <option value="grupo">nombre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label"
+                >Titulo del Anuncio:</label
+              >
+              <input class="form-control" name="txttit" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label"
+                >Descripcion del Anuncio:</label
+              >
+              <textarea
+                class="form-control"
+                rows="6"
+                cols="30"
+                name="txtsugerencias"
+                id="txtsugerencias"
+                size="500"
+                maxlength="500"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Cerrar
+          </button>
+          <button type="button" class="btn text-white bg-dark">
+            Crear Anuncio
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-
-
-<div
-  class="modal fade"
-  id="ventana_crear_grupo"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-white bg-dark">
-        <h5 class="modal-title">Nuevo Grupo</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          style="color: white;"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label"
-              >Nombre del Grupo</label>
+  <div
+    class="modal fade"
+    id="ventana_crear_grupo"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form (submit)="crearGrupo()">
+          <div class="modal-header text-white bg-dark">
+            <h5 class="modal-title">Nuevo Grupo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              style="color: white;"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label"
+                >Nombre del Grupo</label
+              >
               <input
-              class="form-control"
-              name="codgrupo"
-              type="text"
-              required
-            />
-            
+                class="form-control"
+                [(ngModel)]="grupo.nombre"
+                name="nombre"
+                type="text"
+                required
+              />
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cerrarcrear"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="submit" class="btn text-white bg-dark">
+              Crear Grupo
+            </button>
           </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Cerrar
-        </button>
-        <button type="button" class="btn text-white bg-dark">
-          Crear Grupo
-        </button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #empleado1>
+<div
+    class="modal fade"
+    id="ventana_ingresar_grupo"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form (submit)="agregarGrupo()">
+          <div class="modal-header text-white bg-dark">
+            <h5 class="modal-title">Ingresar a un Grupo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              style="color: white;"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label"
+                >Seleccione el Grupo</label
+              >
+              <select 
+              class="form-control selectpicker show-tick" title="Seleccione un Grupo" data-style="bg-light" data-size="6" data-container="body"            data-live-search="true"
+              name="nombre"
+              [(ngModel)]="agregar.nombre"
+              required>
+                <option
+                  *ngFor="let allgrupo of allgrupos"
+                  [value]="allgrupo.nombre">
+                  {{ allgrupo.nombre }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cerraragregar"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="submit" class="btn text-white bg-dark">
+              Unirse al Grupo
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-</div>
-</ng-container>
+</ng-template>

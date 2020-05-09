@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { IngresarComponent } from './components/ingresar/ingresar.component';
 import { AnunciosComponent } from './components/anuncios/anuncios.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 
@@ -21,7 +20,6 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     SigninComponent,
     SignupComponent,
     MenuComponent,
-    IngresarComponent,
     AnunciosComponent,
     PrincipalComponent
   ],

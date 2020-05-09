@@ -28,6 +28,22 @@ export class AuthService {
     return this.http.get<any>(this.URL + '/menu')
   }
 
+  getObtGrupos(){
+    return this.http.get<any>(this.URL + '/menu/obtgrupos')
+  }
+
+  getAllGrupos(){
+    return this.http.get<any>(this.URL + '/menu/allgrupos')
+  }
+  
+  crearGrupo(grupo){
+    return this.http.post<any>(this.URL + '/menu/crear',grupo,{ responseType: 'text' as 'json' })
+  }
+
+  agregarGrupo(agregar){
+    return this.http.post<any>(this.URL + '/menu/agregar',agregar,{ responseType: 'text' as 'json' })
+  }
+
   loggedIn(){
     return !!localStorage.getItem('token');
   }
